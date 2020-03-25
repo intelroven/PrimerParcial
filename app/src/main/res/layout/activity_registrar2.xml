@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registrar"
+
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginBottom="0dp">
+
+
+        <TextView
+            android:id="@+id/txtTituloRegitsrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/allerta_stencil"
+            android:text="Registrar Pelicula"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorAccent7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtNombreL"
+            android:layout_width="153dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="23dp"
+            android:ems="10"
+            android:fontFamily="@font/allerta_stencil"
+            android:hint="Titulo"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/colorAccent2"
+            app:layout_constraintEnd_toStartOf="@+id/txtDirector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTituloRegitsrar" />
+
+        <EditText
+            android:id="@+id/txtDirector"
+            android:layout_width="157dp"
+            android:layout_height="41dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="80dp"
+            android:ems="10"
+            android:fontFamily="@font/allerta_stencil"
+            android:hint="Director"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/colorAccent2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.245"
+            app:layout_constraintStart_toEndOf="@+id/txtNombreL"
+            app:layout_constraintTop_toBottomOf="@+id/txtTituloRegitsrar" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Idioma Original"
+            android:textColor="@color/colorAccent7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDirector" />
+
+        <RadioGroup
+            android:id="@+id/chGroup"
+            android:layout_width="311dp"
+            android:layout_height="89dp"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintVertical_bias="0.49">
+
+
+            <CheckBox
+                android:id="@+id/chEspañol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Español"
+                android:textColor="@color/colorAccent2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/allerta_stencil"/>
+
+            <CheckBox
+                android:id="@+id/chIngles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Ingles"
+                android:textColor="@color/colorAccent2"
+                android:fontFamily="@font/allerta_stencil"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Genero artistico"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chGroup"
+            android:fontFamily="@font/allerta_stencil"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="301dp"
+            android:layout_height="128dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:fontFamily="@font/allerta_stencil"><![CDATA[
+
+            />
+
+            ]]>
+
+            <RadioButton
+                android:id="@+id/rdAccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Accion"
+                android:textColor="@color/colorAccent2"
+                android:fontFamily="@font/allerta_stencil"/>
+
+            <RadioButton
+                android:id="@+id/rdSuspenso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suspenso"
+                android:textColor="@color/colorAccent2"
+                android:fontFamily="@font/allerta_stencil"/>
+
+            <RadioButton
+                android:id="@+id/rdDrama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Drama"
+                android:textColor="@color/colorAccent2"
+                android:fontFamily="@font/allerta_stencil"/>
+
+            <RadioButton
+                android:id="@+id/rdComedia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comedia"
+                android:textColor="@color/colorAccent2"
+                android:fontFamily="@font/allerta_stencil"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnGrabar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="55dp"
+            android:background="@color/colorAccent7"
+            android:text="@string/BtnGuardar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            android:fontFamily="@font/allerta_stencil"/>
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="56dp"
+            android:background="@color/colorAccent7"
+            android:text="@string/BtnCancelar"
+            app:layout_constraintStart_toEndOf="@+id/btnGrabar"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            android:fontFamily="@font/allerta_stencil"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
